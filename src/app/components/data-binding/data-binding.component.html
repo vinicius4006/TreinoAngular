@@ -1,5 +1,5 @@
 <section class="property-binding">
-  <article>
+  <!-- <article>
     <h3>Interpolation/Interpolação</h3>
     <p>String renderizada com Interpolação: {{ url }}</p>
     <p>Será que curtiu? {{ cursoAngular && getCursoLike()}}</p>
@@ -14,5 +14,38 @@
     <img [src]="urlImage" alt="img">
     </div>
 
+  </article> -->
+
+  <article>
+    <button
+    (click)="botaoClicado()"
+    class="btn btn-primary">Me clique</button>
+
+    <br />
+
+    <input type="text"
+    (keyup)="onKeyUp($event)"
+    (keyup.enter)="salvarValor(campoInput.value)"
+    (blur)="salvarValor(campoInput.value)"
+    #campoInput
+    />
+
+    <p>Valor Atual: {{ valorAtual }}</p>
+    <p>Valor Salvo: {{ valorSalvo }}</p>
+    <br />
+    <span
+    (mouseover)="onMouseOverOut()"
+    (mouseout)="onMouseOverOut()"
+    [class.highlight]="isMouseOver"
+    >
+
+      Passe o mouse sobre mim</span>
+
+
   </article>
+
+
+
+
+
 </section>

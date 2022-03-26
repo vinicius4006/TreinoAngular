@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
 import { SecondComponentComponent } from './components/second-component/second-component.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CursosModule
+    CursosModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

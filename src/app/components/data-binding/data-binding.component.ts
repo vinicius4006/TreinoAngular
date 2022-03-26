@@ -9,16 +9,30 @@ export class DataBindingComponent implements OnInit {
 
   url = 'https://digimon-api.herokuapp.com';
 
-  getValor(){
-    return 1;
-  }
-  cursoAngular: boolean = true;
+  valorAtual: string = '';
+  valorSalvo: string = '';
 
-  getCursoLike(){
-    return true;
+  isMouseOver: boolean = false;
+
+  salvarValor(valor: string){
+    this.valorSalvo = valor;
   }
 
-  urlImage = 'http://lorempixel.com.br/300/200/?1';
+  botaoClicado(){
+    console.log("WORKS");
+  }
+
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver;
+  }
+
+
+  onKeyUp(event: KeyboardEvent){
+    this.valorAtual = (<HTMLInputElement>event.target).value;
+
+  }
+
+
 
   constructor() { }
 
